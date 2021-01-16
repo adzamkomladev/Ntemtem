@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace NtemtemApi.Models
 {
-    public class Business
+    public class Organization
     {
         public int Id { get; set; }
 
