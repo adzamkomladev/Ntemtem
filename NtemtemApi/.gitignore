@@ -269,6 +269,9 @@ paket-files/
 __pycache__/
 *.pyc
 
+# Databases
+*.db
+
 # Cake - Uncomment if you are using it
 # tools/
 
