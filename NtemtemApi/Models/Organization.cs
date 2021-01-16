@@ -12,8 +12,8 @@ namespace NtemtemApi.Models
         [Required] string City,
         [Required] string Address,
         string GeographicLocation,
-        DateTime CreatedAt,
-        DateTime UpdatedAt,
-        DateTime DeletedAt
+        DateTime? CreatedAt,
+        DateTime? UpdatedAt,
+        DateTime? DeletedAt
     );
 }
