@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using NtemtemApi.Data;
+using NtemtemApi.Services;
 
 namespace NtemtemApi
 {
@@ -36,6 +37,8 @@ namespace NtemtemApi
                 services.AddDbContext<NtemtemApiContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("NtemtemApiContext")));
             }
+
+            services.AddTransient<OrganizationService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

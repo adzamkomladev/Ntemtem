@@ -23,6 +23,7 @@ namespace NtemtemApi.Services
 
         public async Task<Organization> FindOneByIdAsync(int id)
         {
+
             var organization = await _context.Organizations.FirstOrDefaultAsync(m => m.Id == id);
 
             if (organization == null)
@@ -55,10 +56,10 @@ namespace NtemtemApi.Services
 
             return organization;
         }
-        public async Task DeleteOneById(int id)
+        public async Task DeleteOneByIdAsync(int id)
         {
             var organization = await FindOneByIdAsync(id);
-            
+
             _context.Organizations.Remove(organization);
             await _context.SaveChangesAsync();
         }
