@@ -23,6 +23,7 @@ namespace NtemtemApi.Models
         public string Location { get; set; }
 
         [Required]
+        [StringLength(50)]
         public string Status { get; set; }
 
         public DateTime CreatedAt { get; set; }
