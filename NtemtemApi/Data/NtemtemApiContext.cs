@@ -9,7 +9,7 @@ namespace NtemtemApi.Data
         {
         }
 
-        public DbSet<Organization> Organizations { get; init; }
+        public DbSet<Organization> Organizations { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
     }
 }
