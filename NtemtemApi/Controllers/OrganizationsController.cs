@@ -58,5 +58,19 @@ namespace NtemtemApi.Controllers
                 return NotFound();
             }
         }
+
+        [HttpGet("{id}/appointments")]
+        public async Task<ActionResult<List<Appointment>>> GetAllAppointmentsAsync(int id)
+        {
+            try
+            {
+                return await _organizationService.FindAllAppointmentsForOrganizationAsync(id);
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
+
     }
 }
