@@ -59,7 +59,7 @@ namespace NtemtemApi.Controllers
             }
         }
 
-        [HttpGet("{id}/appointments")]
+        [HttpGet("{id}/Appointments")]
         public async Task<ActionResult<List<Appointment>>> GetAllAppointmentsAsync(int id)
         {
             try

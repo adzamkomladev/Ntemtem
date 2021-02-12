@@ -65,7 +65,15 @@ namespace NtemtemApi.Services
 
         public async Task<List<Appointment>> FindAllAppointmentsForOrganizationAsync(int id)
         {
-            var organization = await FindOneByIdAsync(id);
+            var organization = await _context.Organizations
+            .Include(o => o.Appointments)
+            .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (organization == null)
+            {
+                throw new NullReferenceException();
+            }
+
             return organization.Appointments;
         }
 

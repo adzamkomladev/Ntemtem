@@ -39,6 +39,7 @@ namespace NtemtemApi
             }
 
             services.AddTransient<OrganizationService>();
+            services.AddTransient<AppointmentService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
