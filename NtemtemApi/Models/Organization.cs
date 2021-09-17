@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace NtemtemApi.Models
@@ -7,8 +8,8 @@ namespace NtemtemApi.Models
     {
         public int Id { get; set; }
 
-        [StringLength(100)]
         [Required]
+        [StringLength(100)]
         public string Name { get; set; }
 
         [Required]
@@ -30,10 +31,12 @@ namespace NtemtemApi.Models
 
         public string GeographicLocation { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
 
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
-        public DateTime DeletedAt { get; set; }
+        public DateTime? DeletedAt { get; set; }
+
+        public List<Appointment> Appointments { get; set; }
     }
 }
